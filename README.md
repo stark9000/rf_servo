@@ -6,3 +6,5 @@ https://github.com/nRF24/RF24Network
 
 https://github.com/nRF24/RF24
 
+https://github.com/arduino-libraries/Servo
+
