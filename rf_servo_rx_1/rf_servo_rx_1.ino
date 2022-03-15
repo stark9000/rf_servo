@@ -34,7 +34,8 @@ void loop() {
   if (Radio.available()) {
     char text[32] = "";
     Radio.read(&text, sizeof(text));
-    if (text == "M1") {
+    rxd = String(text);
+    if (rxd == "M1") {
       Serial.println(text);
     }
   }
