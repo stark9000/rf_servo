@@ -30,6 +30,8 @@ void setup() {
   servo2.attach(5);
   servo3.attach(6);
   servo4.attach(9);
+  servo1.write(i);
+  delay(10);
 }
 
 void loop() {
@@ -38,7 +40,14 @@ void loop() {
     Radio.read(&text, sizeof(text));
     rxd = String(text);
     if (rxd == "M1") {
-      for (i = 0; i < 45; i++) {
+      servo1.write(i);
+      delay(10);
+      if (i < 45) {
+        i++;
+        delay(50);
+        Serial.println(i);
+      } else if (i > 45) {
+        i = 0;
         servo1.write(i);
         delay(10);
       }
