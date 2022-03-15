@@ -38,7 +38,10 @@ void loop() {
     Radio.read(&text, sizeof(text));
     rxd = String(text);
     if (rxd == "M1") {
-      Serial.println(rxd);
+      for (i = 0; i < 45; i++) {
+        servo1.write(i);
+        delay(10);
+      }
     }
   }
 }
