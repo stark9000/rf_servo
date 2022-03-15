@@ -17,6 +17,8 @@ Servo servo4;
 
 int i = 0;
 
+String rxd  = "";
+
 void setup() {
   Serial.begin(9600);
   Serial.println("started!");
