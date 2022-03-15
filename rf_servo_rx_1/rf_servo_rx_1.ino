@@ -34,12 +34,8 @@ void loop() {
   if (Radio.available()) {
     char text[32] = "";
     Radio.read(&text, sizeof(text));
-    Serial.println(text);
     if (text == "M1") {
-      for (i = 0; i < 90; i++) {
-        servo1.write(i);
-        delay(10);
-      }
+      Serial.println(text);
     }
   }
 }
