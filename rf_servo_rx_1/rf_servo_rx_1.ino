@@ -34,9 +34,9 @@ void setup() {
   servo3.attach(6);
   servo4.attach(9);
   servo1.write(a);
-  servo1.write(b);
-  servo1.write(c);
-  servo1.write(d);
+  servo2.write(b);
+  servo3.write(c);
+  servo4.write(d);
   delay(10);
 }
 
@@ -56,7 +56,7 @@ void loop() {
     }
 
     if (rxd == "M2") {
-      servo1.write(b);
+      servo2.write(b);
       delay(10);
       if (b < 45) {
         b++;
@@ -65,7 +65,7 @@ void loop() {
     }
 
     if (rxd == "M3") {
-      servo1.write(c);
+      servo3.write(c);
       delay(10);
       if (c > 45) {
         c--;
@@ -74,7 +74,7 @@ void loop() {
     }
 
     if (rxd == "M4") {
-      servo1.write(d);
+      servo4.write(d);
       delay(10);
       if (d > 45) {
         d--;
