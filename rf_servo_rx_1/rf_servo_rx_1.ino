@@ -36,7 +36,7 @@ void loop() {
     Radio.read(&text, sizeof(text));
     rxd = String(text);
     if (rxd == "M1") {
-      Serial.println(text);
+      Serial.println(rxd);
     }
   }
 }
