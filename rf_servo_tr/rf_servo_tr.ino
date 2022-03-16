@@ -58,4 +58,12 @@ void loop() {
     delay(50);
   }
 
+
+  if (digitalRead(BTN_1) && digitalRead(BTN_4) ) {
+    Serial.println("reset pressed.");
+    const char text[] = "M5";
+    Radio.write(&text, sizeof(text));
+    delay(50);
+  }
+
 }
