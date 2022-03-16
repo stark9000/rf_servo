@@ -81,5 +81,15 @@ void loop() {
         delay(50);
       }
     }
+    if (rxd == "M5") {
+      a = 0;
+      b = 0;
+      c = 90;
+      d = 90;
+      servo1.write(a);
+      servo2.write(b);
+      servo3.write(c);
+      servo4.write(d);
+    }
   }
 }
